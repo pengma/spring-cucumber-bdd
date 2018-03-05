@@ -10,6 +10,7 @@ public class WebDriverConf {
     private String browserName;
     private String version;
     private String platform;
+    private String browserPathName;
     private String browserPath;
     private String remoteUrl;
 

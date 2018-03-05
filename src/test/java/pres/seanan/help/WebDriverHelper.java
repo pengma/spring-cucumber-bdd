@@ -3,6 +3,7 @@ package pres.seanan.help;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pres.seanan.conf.ConfigInitiator;
 import pres.seanan.conf.WebDriverConf;
 
 import java.net.MalformedURLException;
@@ -11,7 +12,6 @@ import java.net.URL;
 public class WebDriverHelper {
 
     public static WebDriver webDriver;
-    private static WebDriverConf webDriverConf;
 
     private WebDriverHelper() {
     }
@@ -20,9 +20,9 @@ public class WebDriverHelper {
         if (null == webDriver) {
             synchronized (WebDriverHelper.class) {
                 if (null == webDriver) {
-                    webDriverConf = ConfHelper.WEB_DRIVER_CONF;
-                    if (ConfHelper.isFirefox()) {
-                        System.setProperty("webdriver.gecko.driver", webDriverConf.getBrowserPath());
+                    WebDriverConf webDriverConf = ConfigInitiator.getSingletonInstance();
+                    if (null != webDriverConf.getBrowserPathName()) {
+                        System.setProperty(webDriverConf.getBrowserName(), webDriverConf.getBrowserPath());
                     }
                     if (webDriverConf.isRemote()) {
                         webDriver = new RemoteWebDriver(new URL(webDriverConf.getRemoteUrl()), webDriverConf.toDesiredCapabilities());
