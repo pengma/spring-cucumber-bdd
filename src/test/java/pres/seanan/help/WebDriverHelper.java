@@ -22,7 +22,7 @@ public class WebDriverHelper {
                 if (null == webDriver) {
                     WebDriverConf webDriverConf = ConfigInitiator.getSingletonInstance();
                     if (null != webDriverConf.getBrowserPathName()) {
-                        System.setProperty(webDriverConf.getBrowserName(), webDriverConf.getBrowserPath());
+                        System.setProperty(webDriverConf.getBrowserPathName(), webDriverConf.getBrowserPath());
                     }
                     if (webDriverConf.isRemote()) {
                         webDriver = new RemoteWebDriver(new URL(webDriverConf.getRemoteUrl()), webDriverConf.toDesiredCapabilities());
