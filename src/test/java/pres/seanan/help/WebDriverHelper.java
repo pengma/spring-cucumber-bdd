@@ -48,7 +48,7 @@ public class WebDriverHelper {
         if (null != webDriver) {
             synchronized (webDriver) {
                 if (null != webDriver) {
-                    webDriver.close();
+                    webDriver.quit();
                     webDriver = null;
                 }
             }
