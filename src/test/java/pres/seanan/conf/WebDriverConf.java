@@ -21,4 +21,5 @@ public class WebDriverConf {
     public DesiredCapabilities toDesiredCapabilities() {
         return new DesiredCapabilities(browserName, version, Platform.valueOf(platform));
     }
+
 }

@@ -18,7 +18,7 @@ public class BaiDuStep extends AbstractSteps {
 
     @当("^打开 BaiDu 搜索$")
     public void openBaiDu() {
-        baiDuAction.getBaiDu();
+        baiDuAction.getBaiDu(ENVIRONMENT_CONF.getBaseUrl());
     }
 
     @当("^输入 \"([^\"]*)\" 在搜索框, 点击搜索$")
@@ -28,7 +28,6 @@ public class BaiDuStep extends AbstractSteps {
 
     @当("^将搜索到 \"([^\"]*)\" 相关信息$")
     public void assertMessage(String message) throws Throwable {
-        Thread.sleep(2000);
         assertThat(baiDuAction.getSource()).contains(message);
     }
 

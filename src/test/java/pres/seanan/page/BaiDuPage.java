@@ -13,8 +13,8 @@ public class BaiDuPage {
         return this;
     }
 
-    public void getBaiDu() {
-        webDriver.navigate().to("http://www.baidu.com");
+    public void getBaiDu(String url) {
+        webDriver.navigate().to(url);
     }
 
     public void clickSearch() {

@@ -10,8 +10,8 @@ public class BaiDuAction {
     @Autowired
     BaiDuPage baiDuPage;
 
-    public void getBaiDu() {
-        baiDuPage.getBaiDu();
+    public void getBaiDu(String url) {
+        baiDuPage.getBaiDu(url);
     }
 
     public void search(String content) {
