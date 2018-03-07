@@ -11,7 +11,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReportRunner {
+public class ZReportGenTest {
 
     @Test
     public void genReport() {
