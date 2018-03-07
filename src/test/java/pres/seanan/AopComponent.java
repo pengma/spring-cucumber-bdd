@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class LogComponent {
+public class AopComponent {
 
     @Pointcut("execution(public * pres.seanan.page.*.*(..))")
     public void myMethod() {
