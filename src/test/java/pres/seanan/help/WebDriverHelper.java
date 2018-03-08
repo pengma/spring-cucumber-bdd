@@ -12,7 +12,6 @@ import java.net.URL;
 
 import static pres.seanan.conf.ConfigType.WEBDRIVER_CONFIG;
 
-
 public class WebDriverHelper {
 
     private static final WebDriverConf WEB_DRIVER_CONF = ConfigHelper.getConfig(WEBDRIVER_CONFIG, WebDriverConf.class);
