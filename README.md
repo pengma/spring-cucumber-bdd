@@ -28,4 +28,22 @@ UI行为驱动框架
 - decision: 断言最终结果
 - listen: 监听结果, 并通知观察者
 
+Run Demo命令
+--------------------
+```bash
+    clean verify -PrunCukes -DwebDriver.name=${webDriver.name} -Denvironment.name=${environment.name}
+```  
+例如:
+```bash  
+    clean verify -PrunCukes -DwebDriver.name=local.phantomjs -Denvironment.name=test
+```
+
+Run Demo通过Junit
+----------------
+在resources/application.conf中设置webDriver.name或environment.name来控制浏览器和环境配置, 运行测试RunCukesTest即可以运行测试我们案例, 运行ZReportGenTest既可以生成报告在 target/cucumber-html-reports
+
+Run Demo通过Cucumber
+----------------
+直接运行cucumber的feature文件中场景.
+
  
