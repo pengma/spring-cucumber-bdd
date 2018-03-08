@@ -28,6 +28,10 @@ UI行为驱动框架
 - decision: 断言最终结果
 - listen: 监听结果, 并通知观察者
 
+时序图 
+-----------------------------
+![BDD-sequence](./bdd-sequence.png)
+
 Run Demo命令
 --------------------
 ```bash
