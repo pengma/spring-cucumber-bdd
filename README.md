@@ -31,11 +31,11 @@ UI行为驱动框架
 Run Demo命令
 --------------------
 ```bash
-    clean verify -PrunCukes -DwebDriver.name=${webDriver.name} -Denvironment.name=${environment.name}
+    clean verify -P runCukes -D webDriver.name=${webDriver.name} -D environment.name=${environment.name}
 ```  
 例如:
 ```bash  
-    clean verify -PrunCukes -DwebDriver.name=local.phantomjs -Denvironment.name=test
+    clean verify -P runCukes -D webDriver.name=local.phantomjs -D environment.name=test
 ```
 
 Run Demo通过Junit
