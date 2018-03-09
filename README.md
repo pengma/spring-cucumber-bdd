@@ -18,7 +18,7 @@ UI行为驱动框架
 
 架构图 (./BDD-Framework.rp)
 -----------------------------
-![BDD-Framework](./bdd-framework.png)
+![BDD-Framework](bdd-framework.png)
 
 - consensus: BDD核心思想层, 采用cucumber
 - step: 步骤直接实现
@@ -30,7 +30,7 @@ UI行为驱动框架
 
 时序图 
 -----------------------------
-![BDD-sequence](./bdd-sequence.png)
+![BDD-sequence](bdd-sequence.png)
 
 Run Demo命令
 --------------------
